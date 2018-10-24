@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+const port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -27,7 +28,7 @@ hbs.registerHelper('screamIt', (text) => {
     return text.toUpperCase();
 });
 
-const port = 3000;
+
 
 app.get('/', (req, res) => {
     // res.send('<h1>Hello</h1>');
